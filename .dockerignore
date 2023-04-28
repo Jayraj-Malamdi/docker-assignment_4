@@ -1,0 +1,5 @@
+trainee_backend/node_modules
+trainee_frontend/node_modules
+
+# production
+trainee_frontend/build
