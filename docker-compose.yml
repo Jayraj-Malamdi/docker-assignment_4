@@ -4,7 +4,7 @@ services:
 # database service: named as mongodb
   mongodb:
     image: mongo
-    container_name: mongodb_cont
+    container_name: mongodb
     restart: always  
     networks:
       - mern_2
@@ -17,7 +17,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./trainee_backend/
-    container_name: trainee_backend_cont
+    container_name: trainee_backend
     restart: always
     networks:
       - mern_2
@@ -32,7 +32,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./trainee_frontend/
-    container_name: trainee_frontend_cont
+    container_name: trainee_frontend
     restart: always
     ports:
       - 80:80

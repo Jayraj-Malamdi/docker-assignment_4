@@ -13,7 +13,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    // basename is used to remove trialing slash, but is not working
+    <BrowserRouter basename={window.location.pathname.replace(/\/$/, '')}> 
      <NavBar />
      <Routes>
        <Route path='/' element={<CodeforInterview />} />
